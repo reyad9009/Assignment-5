@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
+    <script src="main.js"></script>
     <style>
     .font-Lexend{
       font-family: "Lexend", sans-serif;
@@ -36,12 +37,13 @@
             </div>
         </nav>
         <div class="flex flex-row justify-center gap-5 lg:mt-32 mt-10">
-            <button class="btn border-none bg-[#b4f461] lg:text-lg px-7">Donation</button>
-            <button class="btn border-black lg:text-lg px-7">History</button>
+            <button onclick="donationBtn()" class="btn border-none bg-[#b4f461] lg:text-lg px-7">Donation</button>
+            <button onclick="historyBtn()" class="btn border-black lg:text-lg px-7">History</button>
         </div>
     </header>
 
     <main class="flex flex-col justify-center items-center bg-white">
+        <div id="donation">
         <!--Section 1 start -->
         <section class="flex lg:gap-14 flex-wrap flex-col justify-center items-center lg:flex-row lg:mt-16 mt-5">
             <figure class=" flex justify-center items-center mt-5 lg:mt-0 rounded-xl w-[90%] h-[230px] lg:w-[520px] lg:h-[380px]  overflow-hidden">
@@ -64,7 +66,7 @@
                     <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
                 </div>
                 <div class="w-full lg:w-[100%] mt-4">
-                    <button class="btn bg-[#b4f461] w-full lg:text-lg">Donate Now</button>
+                    <button  class="btn bg-[#b4f461] w-full lg:text-lg">Donate Now</button>
                 </div>
             </div>
         </section>
@@ -125,9 +127,9 @@
             </div>
         </section>
         <!--Section 3 end-->
-
+    </div>
         <!--History Section start-->
-        <section class="hidden">
+        <section id="history" class="hidden">
             <div>
                 <span></span>
                 <span>Taka is Donated For</span>
