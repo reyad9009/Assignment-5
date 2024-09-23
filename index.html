@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!--DaisyUI CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <style>
+    .font-Lexend{
+      font-family: "Lexend", sans-serif;
+    }
+      </style>
+</head>
+<body class="font-Lexend">
+    <header class="flex flex-col justify-center items-center">
+        <nav class="sm:w-[100%] w-[100%] mt-4 flex flex-row justify-cente items-center">
+            <div class="navbar flex flex-row justify-around">
+                <div class="navbar-start w-fit">
+                  <button class="btn btn-ghost bg-[] text-[1rem]">Blog</button>
+                </div>
+                <div class="navbar-center flex items-center justify-center">
+                    <img src="assets/logo.png" alt="" class="w-[10%]">
+                    <a class="btn text-[1rem]">Donate Bangladesh</a>
+                </div>
+                <div class="navbar-end w-fit">
+                    <img src="assets/coin.png" alt="">
+                    <span class="hidden">5000</span>
+                    <span class="hidden">BDT</span>
+                </div>
+            </div>
+        </nav>
+        <div class="flex flex-row justify-center gap-5 mt-10">
+            <button class="btn border-none bg-[#6dff9b]">Donation</button>
+            <button class="btn border-black">History</button>
+        </div>
+    </header>
+    <main class="flex flex-col justify-center items-center bg-white">
+        <!--Section 2 About us start-->
+        <section class="flex lg:gap-14 flex-wrap flex-col justify-center items-center lg:flex-row lg:pt-40 mt-5">
+            <figure class=" flex justify-center items-center mt-5 lg:mt-0 rounded-xl h-[230px] lg:h-[560px] lg:w-[570px] w-[350px] overflow-hidden">
+                <img class="w-full" src="assets/noakhali.png" alt="" />
+            </figure>
+            <div class="mt-10 lg:mt-0 flex flex-col items-center justify-center lg:items-start lg:w-[37%] w-[90%]">
+                <div class="flex gap-2 w-full items-center">
+                    <img src="assets/coin.png" alt="">
+                    <span>5000</span>
+                    <span>BDT</span>
+                </div>
+                <h1 class="py-5 lg:text-left font-extrabold text-xl lg:w-[100%] lg:pr-32">Donate for Flood at Noakhali, Bangladesh</h1>
+                <p class="text-justify lg:text-left text-[0.92rem] lg:w-[100%]">The recent floods in Noakhali have caused significant damage to
+                    homes infrastructure. Your donation will help provide essential
+                    supplies and to those affected by this disaster. Every contribution,
+                    big or small, makes difference. Please join us in supporting the relief
+                    efforts and making a positive impact on the lives of those in need.</p>
+          
+                <div class="mt-5 lg:w-[100%] w-full">
+                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                </div>
+                <div class="w-full lg:w-[100%] mt-3">
+                    <button class="btn bg-[#b4f461] w-full">Donate Now</button>
+                </div>
+            </div>
+      </section>
+      <!--Section 2 About us end-->
+    </main>
+</body>
+</html>
