@@ -52,7 +52,7 @@
             <div class="mt-5 lg:mt-0 flex flex-col items-center justify-center lg:items-start lg:w-[30%] w-[90%]">
                 <div class="flex gap-2 w-full items-center">
                     <img src="assets/coin.png" alt="">
-                    <span>5000</span>
+                    <span id="totalAmoumt">5000</span>
                     <span>BDT</span>
                 </div>
                 <h1 class="py-3 lg:py-5 lg:text-left font-extrabold text-xl lg:w-[100%] lg:pr-32">Donate for Flood at Noakhali, Bangladesh</h1>
@@ -63,10 +63,10 @@
                     efforts and making a positive impact on the lives of those in need.</p>
           
                 <div class="mt-5 lg:w-[100%] w-full">
-                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                    <input id="donationAmount" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
                 </div>
                 <div class="w-full lg:w-[100%] mt-4">
-                    <button  class="btn bg-[#b4f461] w-full lg:text-lg">Donate Now</button>
+                    <button onclick="donateNowBtn()"  class="btn bg-[#b4f461] w-full lg:text-lg">Donate Now</button>
                 </div>
             </div>
         </section>
