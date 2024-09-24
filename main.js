@@ -19,6 +19,32 @@ function donationBtn(){
 }
 //////////////////////////////////////////////////////////////
 
+function donateNowBtn(){
+    const inputAmount = document.getElementById("donationAmount").value;
+    let donatedAmount = parseFloat(inputAmount);
+
+    const showingAmount = document.getElementById("totalAmoumt");
+    let currentAmount  = parseFloat(showingAmount.innerText);
+
+    const myCurrentAmount = document.getElementById("myAmount");
+        const myAmount = parseFloat(myCurrentAmount.innerText);
+        
+
+        if(inputAmount > 0 && inputAmount !=0){
+            const intotalAmount = donatedAmount + currentAmount;
+            showingAmount.innerText = intotalAmount;
+
+            const myNewAmount = myAmount - donatedAmount;
+                myCurrentAmount.innerText = myNewAmount;
+            
+                if(myNewAmount <= 0){
+                    alert("Your balance is now zero.");
+                }
+        } 
+
+
+
+}
 
 
 
