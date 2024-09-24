@@ -20,31 +20,40 @@ function donationBtn(){
 //////////////////////////////////////////////////////////////
 
 function donateNowBtn(){
+
     const inputAmount = document.getElementById("donationAmount").value;
     let donatedAmount = parseFloat(inputAmount);
 
     const showingAmount = document.getElementById("totalAmoumt");
-    let currentAmount  = parseFloat(showingAmount.innerText);
+    let currentAmount = parseFloat(showingAmount.innerText);
 
     const myCurrentAmount = document.getElementById("myAmount");
-        const myAmount = parseFloat(myCurrentAmount.innerText);
-        
+    let myAmount = parseFloat(myCurrentAmount.innerText);
 
-        if(inputAmount > 0 && inputAmount !=0){
+
+    if(!isNaN(donatedAmount) && donatedAmount > 0){
+
+        if(donatedAmount <= myAmount){
             const intotalAmount = donatedAmount + currentAmount;
-            showingAmount.innerText = intotalAmount;
+            showingAmount.innerText = intotalAmount; 
 
             const myNewAmount = myAmount - donatedAmount;
-                myCurrentAmount.innerText = myNewAmount;
-            
-                if(myNewAmount <= 0){
-                    alert("Your balance is now zero.");
-                }
-        } 
-
-
+            myCurrentAmount.innerText = myNewAmount;
+        }
+        else if (donatedAmount >= myAmount){
+            alert("Your balance is zero");
+        }
+    } 
+    else if(donatedAmount < 0){
+        alert("Invalid donation Amount");
+    }
+    else{
+        alert("Invalid donation Amount");
+    }
 
 }
+
+
 
 
 
