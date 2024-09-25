@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!--DaisyUI CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <script src="main.js"></script>
+    <style>
+        .font-Lexend{
+            font-family: "Lexend", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header class="flex flex-col justify-center items-center"></header>
+        <nav class="sm:w-[100%] w-[100%] mt-4 flex flex-row justify-cente items-center">
+            <div class="navbar flex flex-row justify-around">
+                <div class="navbar-start w-fit">
+                  <button class="btn btn-ghost bg-[] text-[1rem] lg:text-2xl bg-[#b4f461]">
+                    <a href="index.html">Home</a>
+                </button>
+                </div>
+                <div class="navbar-center flex items-center justify-center">
+                    <img src="assets/logo.png" alt="" class="w-[10%] lg:w-10">
+                    <a class="text-[1rem] lg:text-2xl px-2 ">Donate Bangladesh</a>
+                </div>
+                <div class="navbar-end w-fit">
+                    <img src="assets/coin.png" alt="">
+                    <span id="myAmount" class="lg:px-2 lg:text-lg">5000</span>
+                    <span class="hidden lg:block lg:text-lg">BDT</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+<main  class="flex flex-col justify-center items-center bg-white">
+    <section class="mt-20 w-[90%]">
+        <h1 class="mb-10 font-extrabold text-4xl  text-center">Importent FAQ</h1>
+        <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium lg:font-bold">What is the DOM in JavaScript?</div>
+            <div class="collapse-content">
+              <p>According to W3C - "The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document."</p>
+            </div>
+        </div>
+
+        <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium lg:font-bold">How do you find an element in the DOM?</div>
+            <div class="collapse-content">
+              <p>The easiest way to access a single element in the DOM is by its unique ID. You can get an element by ID with the getElementById() method of the document object. In the Console, get the element and assign it to the demoId variable.</p>
+            </div>
+        </div>
+
+        <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium lg:font-bold">What is event delegation in the context of the DOM,
+                and why is it useful?</div>
+            <div class="collapse-content">
+              <p>Event delegation refers to the process of using event propagation (bubbling) to handle events at a higher level in the DOM than the element on which the event originated. It allows us to attach a single event listener for elements that exist now or in the future.</p>
+            </div>
+        </div>
+
+        <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium lg:font-bold">How to manipulate attributes in JavaScript?</div>
+            <div class="collapse-content">
+              <p>To manipulate an element’s attributes, you can use methods like setAttribute() and getAttribute(). To modify styles, you can access the style property of an element and assign new values, for example: element.style.color = "red"; to change the text color.</p>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>
