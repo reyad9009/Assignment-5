@@ -45,17 +45,17 @@ function donationBtn(){
 
 // this function used for donation system & show donation history
 
-function donateNowBtn(){
+function donateNowBtn(totalAmountId, donateForId, donationAmountId, myAmountId){
     //Input
-    const inputAmount = document.getElementById("donationAmount").value;
+    const inputAmount = document.getElementById(donationAmountId).value;
     let donatedAmount = parseFloat(inputAmount);
 
     //donated amount show and change it string to float
-    const showingAmount = document.getElementById("totalAmoumt");
+    const showingAmount = document.getElementById(totalAmountId);
     let currentAmount = parseFloat(showingAmount.innerText);
 
     //my account money 
-    const myCurrentAmount = document.getElementById("myAmount");
+    const myCurrentAmount = document.getElementById(myAmountId);
     let myAmount = parseFloat(myCurrentAmount.innerText);
 
 
@@ -81,7 +81,7 @@ function donateNowBtn(){
                 donatedAmountHistory.innerText = `${donatedAmount} Taka is `;
 
             //Add span tag in div for store description 
-            const amountDonateFor = document.getElementById("donateFor").innerText;
+            const amountDonateFor = document.getElementById(donateForId).innerText;
             const description = document.createElement("span");
                 description.innerText = `${amountDonateFor}`;
 
@@ -117,7 +117,18 @@ function donateNowBtn(){
         alert("Invalid donation Amount");
     }
 }
-donateNowBtn()
+
+
+
+
+
+
+
+donateNowBtn('totalAmoumt', 'donateFor', 'donationAmount', 'myAmount');
+donateNowBtn('totalAmoumt2', 'donateFor2', 'donationAmount2', 'myAmount');
+donateNowBtn('totalAmoumt3', 'donateFor3', 'donationAmount3', 'myAmount');
+
+
 function closeConfirmation(){
     const showCongratesPopup = document.getElementById("congratesPopup");
         showCongratesPopup.classList.add("hidden");
@@ -125,9 +136,7 @@ function closeConfirmation(){
 
 }
 // Call donateNowBtn function for every card
-document.querySelectorAll('.btn.bg-[#b4f461]').forEach(button => {
-    button.addEventListener('click', donateNowBtn);
-});
+
 
 
 
