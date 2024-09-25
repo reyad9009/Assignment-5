@@ -100,7 +100,8 @@ function donateNowBtn(){
             historySection.appendChild(newHistory);
 
             const showCongratesPopup = document.getElementById("congratesPopup");
-                showCongratesPopup.classList.remove("hidden")
+                showCongratesPopup.classList.remove("hidden");
+
         }
 
         else if (donatedAmount >= myAmount){
@@ -116,9 +117,12 @@ function donateNowBtn(){
         alert("Invalid donation Amount");
     }
 }
+
 function closeConfirmation(){
     const showCongratesPopup = document.getElementById("congratesPopup");
-    showCongratesPopup.classList.add("hidden");
+        showCongratesPopup.classList.add("hidden");
+
+
 }
 
 

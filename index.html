@@ -16,6 +16,10 @@
         .font-Lexend{
             font-family: "Lexend", sans-serif;
         }
+        /*changing the background when the popup is show*/
+        .bg-change {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
     </style>
 </head>
 <body class="font-Lexend">
@@ -146,17 +150,23 @@
 
 
 
-        <!--Congrates Section start-->
-        <section id="congratesPopup" class="absolute h-[160vh] hidden">
-            <div class="flex flex-col justify-center items-center py-5 px-28 bg-[#78f5fc] rounded-xl">
-                <h1 class="text-3xl font-extrabold ">Congrates!</h1>
-                <img src="assets/coin.png" alt="" class="py-5">
-                <p class="text-[1rem]">You Have Donated for Humankind</p>
-                <p class="text-xl font-bold py-4">Successfully</p>
-                <button onclick="closeConfirmation()" class="btn bg-transparent border-none hover:bg-transparent text-[1rem] font-extrabold">close confirmation</button>
-            </div>
-        </section>
-        <!--Congrates Section end-->
+
+<!-- Congrats Section start -->
+<!-- Congrats Section start -->
+<section id="congratesPopup" class="fixed hidden inset-0 flex justify-center items-center bg-[#bdbdbd] bg-opacity-50 z-50">
+    <div class="flex flex-col justify-center items-center py-5 px-10 lg:px-28 bg-[#78f5fc] rounded-xl">
+        <h1 class="text-3xl font-extrabold">Congrats!</h1>
+        <img src="assets/coin.png" alt="" class="py-5">
+        <p class="text-[1rem]">You Have Donated for Humankind</p>
+        <p class="text-xl font-bold py-4">Successfully</p>
+        <button onclick="closeConfirmation()" class="btn bg-transparent border-none hover:bg-transparent text-[1rem] font-extrabold">Close Confirmation</button>
+    </div>
+</section>
+<!-- Congrats Section end -->
+
+
+<!-- Congrats Section end -->
+
     </main>
 </body>
 </html>
