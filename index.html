@@ -16,14 +16,10 @@
         .font-Lexend{
             font-family: "Lexend", sans-serif;
         }
-        /*changing the background when the popup is show*/
-        .bg-change {
-            background-color: rgba(0, 0, 0, 0.5);
-        }
     </style>
 </head>
 <body class="font-Lexend">
-    <header class="flex flex-col justify-center items-center">
+    <header class="flex flex-col justify-center items-center sticky top-0 z-50 backdrop-blur-lg">
         <nav class="sm:w-[100%] w-[100%] mt-4 flex flex-row justify-cente items-center">
             <div class="navbar flex flex-row justify-around">
                 <div class="navbar-start w-fit">
@@ -40,7 +36,7 @@
                 </div>
             </div>
         </nav>
-        <div class="flex flex-row justify-center gap-5 lg:mt-32 mt-10">
+        <div class="flex flex-row justify-center gap-5 lg:mt-32 mt-10 mb-10">
             <button id="donationColour" onclick="donationBtn()" class="btn bg-[#b4f461] hover:border-none hover:bg-[#b4f461]  lg:text-lg px-7">Donation</button>
             <button id="historyColour" onclick="historyBtn()" class="btn border-black hover:border-none hover:bg-[#b4f461] lg:text-lg px-7">History</button>
         </div>
@@ -87,7 +83,7 @@
                     <span>5000</span>
                     <span>BDT</span>
                 </div>
-                <h1 class="py-3 lg:py-5 lg:text-left font-extrabold text-xl lg:w-[100%] lg:pr-32">Donate for Flood at Noakhali, Bangladesh</h1>
+                <h1  id="donateFor" class="py-3 lg:py-5 lg:text-left font-extrabold text-xl lg:w-[100%] lg:pr-32">Donate for Flood at Noakhali, Bangladesh</h1>
                 <p class="text-justify lg:text-left text-[0.92rem] lg:w-[100%] leading-6">The recent floods in Noakhali have caused significant damage to
                     homes infrastructure. Your donation will help provide essential
                     supplies and to those affected by this disaster. Every contribution,
@@ -95,10 +91,10 @@
                     efforts and making a positive impact on the lives of those in need.</p>
           
                 <div class="mt-5 lg:w-[100%] w-full">
-                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                    <input id="donationAmount" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
                 </div>
                 <div class="w-full lg:w-[100%] mt-4">
-                    <button class="btn bg-[#b4f461] w-full lg:text-lg">Donate Now</button>
+                    <button onclick="donateNowBtn()"  class="btn bg-[#b4f461] w-full lg:text-lg">Donate Now</button>
                 </div>
             </div>
         </section>
@@ -115,7 +111,7 @@
                     <span>5000</span>
                     <span>BDT</span>
                 </div>
-                <h1 class="py-3 lg:py-5 lg:text-left font-extrabold text-xl lg:w-[100%] lg:pr-32">Donate for Flood at Noakhali, Bangladesh</h1>
+                <h1  id="donateFor" class="py-3 lg:py-5 lg:text-left font-extrabold text-xl lg:w-[100%] lg:pr-32">Donate for Flood at Noakhali, Bangladesh</h1>
                 <p class="text-justify lg:text-left text-[0.92rem] lg:w-[100%] leading-6">The recent floods in Noakhali have caused significant damage to
                     homes infrastructure. Your donation will help provide essential
                     supplies and to those affected by this disaster. Every contribution,
@@ -123,10 +119,10 @@
                     efforts and making a positive impact on the lives of those in need.</p>
           
                 <div class="mt-5 lg:w-[100%] w-full">
-                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                    <input id="donationAmount" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
                 </div>
                 <div class="w-full lg:w-[100%] mt-4">
-                    <button class="btn bg-[#b4f461] w-full lg:text-lg">Donate Now</button>
+                    <button onclick="donateNowBtn()"  class="btn bg-[#b4f461] w-full lg:text-lg">Donate Now</button>
                 </div>
             </div>
         </section>
@@ -147,13 +143,8 @@
 
 
 
-
-
-
-
 <!-- Congrats Section start -->
-<!-- Congrats Section start -->
-<section id="congratesPopup" class="fixed hidden inset-0 flex justify-center items-center bg-[#bdbdbd] bg-opacity-50 z-50">
+<section id="congratesPopup" class="fixed hidden inset-0 flex justify-center items-center bg-[#000000] bg-opacity-50 z-50">
     <div class="flex flex-col justify-center items-center py-5 px-10 lg:px-28 bg-[#78f5fc] rounded-xl">
         <h1 class="text-3xl font-extrabold">Congrats!</h1>
         <img src="assets/coin.png" alt="" class="py-5">

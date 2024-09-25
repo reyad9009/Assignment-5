@@ -117,13 +117,17 @@ function donateNowBtn(){
         alert("Invalid donation Amount");
     }
 }
-
+donateNowBtn()
 function closeConfirmation(){
     const showCongratesPopup = document.getElementById("congratesPopup");
         showCongratesPopup.classList.add("hidden");
 
 
 }
+// Call donateNowBtn function for every card
+document.querySelectorAll('.btn.bg-[#b4f461]').forEach(button => {
+    button.addEventListener('click', donateNowBtn);
+});
 
 
 
