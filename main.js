@@ -7,8 +7,8 @@ function historyBtn() {
         donationSection.classList.add("hidden");
 
     //Donate first.   
-    const NoHistoryText = document.getElementById("noHistory")
-        NoHistoryText.classList.remove("hidden");   
+    //const NoHistoryText = document.getElementById("noHistory")
+     //   NoHistoryText.classList.remove("hidden");   
 
     //for change btn colour
     const changeHistoryColour = document.getElementById("historyColour");
